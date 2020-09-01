@@ -1,6 +1,8 @@
 package ru.x5;
-/*Ввести целое число в консоли и вывести на экран
-последнюю цифру введенного числа.*/
+/*
+Ввести целое число в консоли и вывести на экран
+последнюю цифру введенного числа.
+*/
 public class Task1 {
     public void printLastDigit(int number){
         System.out.println(number % 10);
