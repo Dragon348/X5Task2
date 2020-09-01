@@ -5,9 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Reader {
-    private BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
+    private final BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
     public int readInt(){
-        BufferedReader reader= new BufferedReader(new InputStreamReader(System.in));
         while (true)
             try {
                 return Integer.parseInt(reader.readLine());
@@ -18,5 +17,14 @@ public class Reader {
             catch (NumberFormatException e){
                 System.out.println("Ошибка преобразования строки в число. Введено не число:" + e);
             }
+    }
+    public String readString(){
+        try {
+            return reader.readLine();
+        }
+        catch (IOException e) {
+            System.out.println("Ошибка чтения:" + e);
+        }
+        return null;
     }
 }
