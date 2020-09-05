@@ -42,9 +42,9 @@ public class TaskController {
             "[15,10,0,-6,-5,3,0,-34,0,32,56,0,24,-52]. Переместить\n" +
             "нули в конец массива. Вывести результат в консоль";
 
-    public static void taskController(Reader reader){
+    public static void taskController(Reader reader) {
         String command = "";
-        while (true){
+        while (true) {
             System.out.println("Введите номер задания (1-10).\nДля запуска всех заданий введите \"all\".\nДля выхода введите \"exit\"");
             command = reader.readString();
             if (command.toLowerCase().equals("exit")) break;
@@ -60,21 +60,18 @@ public class TaskController {
                 callTask9();
                 callTask10();
 
-            }
-            else {
+            } else {
                 int taskNumber;
                 try {
                     taskNumber = Integer.parseInt(command);
-                }
-                catch (NumberFormatException e){
+                } catch (NumberFormatException e) {
                     System.out.println("Ошибка преобразования строки в число. Введено не число:" + e);
                     continue;
                 }
                 if ((taskNumber < 1) || (taskNumber > 10)) {
                     System.out.println("Введён некорректный номер задания");
-                }
-                else {
-                    switch (taskNumber){
+                } else {
+                    switch (taskNumber) {
                         case 1: {
                             callTask1(reader);
                             break;
@@ -120,7 +117,8 @@ public class TaskController {
             }
         }
     }
-    public static void callTask1(Reader reader){
+
+    public static void callTask1(Reader reader) {
         Task1 task = new Task1();
         System.out.println("Задание:");
         System.out.println(task1);
@@ -128,7 +126,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask2(Reader reader){
+
+    public static void callTask2(Reader reader) {
         Task2 task = new Task2();
         System.out.println("Задание:");
         System.out.println(task2);
@@ -136,7 +135,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask3(Reader reader){
+
+    public static void callTask3(Reader reader) {
         Task3 task = new Task3();
         System.out.println("Задание:");
         System.out.println(task3);
@@ -144,7 +144,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask4(Reader reader){
+
+    public static void callTask4(Reader reader) {
         Task4 task = new Task4();
         System.out.println("Задание:");
         System.out.println(task4);
@@ -152,7 +153,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask5(Reader reader){
+
+    public static void callTask5(Reader reader) {
         Task5 task = new Task5();
         System.out.println("Задание:");
         System.out.println(task5);
@@ -160,7 +162,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask6(Reader reader){
+
+    public static void callTask6(Reader reader) {
         Task6 task = new Task6();
         System.out.println("Задание:");
         System.out.println(task6);
@@ -168,7 +171,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask7(Reader reader){
+
+    public static void callTask7(Reader reader) {
         Task7 task = new Task7();
         System.out.println("Задание:");
         System.out.println(task7);
@@ -176,7 +180,8 @@ public class TaskController {
         task.solveTask(reader);
         System.out.println();
     }
-    public static void callTask8(){
+
+    public static void callTask8() {
         Task8 task = new Task8();
         System.out.println("Задание:");
         System.out.println(task8);
@@ -184,7 +189,8 @@ public class TaskController {
         task.solveTask();
         System.out.println();
     }
-    public static void callTask9(){
+
+    public static void callTask9() {
         Task9 task = new Task9();
         System.out.println("Задание:");
         System.out.println(task9);
@@ -192,7 +198,8 @@ public class TaskController {
         task.solveTask();
         System.out.println();
     }
-    public static void callTask10(){
+
+    public static void callTask10() {
         Task10 task = new Task10();
         System.out.println("Задание:");
         System.out.println(task10);

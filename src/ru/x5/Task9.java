@@ -1,4 +1,5 @@
 package ru.x5;
+
 /*
 Дан массив целых чисел:
 [15,10,51,-6,-5,3,-10,-34,0,32,56,-12,24,-52].
@@ -6,9 +7,10 @@ package ru.x5;
 Вывести результат в консоль
  */
 public class Task9 {
-    private int[] arr = new int[]{15,10,51,-6,-5,3,-10,-34,0,32,56,-12,24,-52};
-    public void reverseArray(){
-        for (int i = 0; i < arr.length-1; i++) {
+    private int[] arr = new int[]{15, 10, 51, -6, -5, 3, -10, -34, 0, 32, 56, -12, 24, -52};
+
+    public void reverseArray() {
+        for (int i = 0; i < arr.length - 1; i++) {
             for (int j = i + 1; j < arr.length; j++) {
                 int a = arr[i];
                 arr[i] = arr[j];
@@ -16,12 +18,14 @@ public class Task9 {
             }
         }
     }
-    public void printArr(){
-        for (int i:arr){
+
+    public void printArr() {
+        for (int i : arr) {
             System.out.print(i + " ");
         }
     }
-    public void solveTask(){
+
+    public void solveTask() {
         reverseArray();
         printArr();
     }

@@ -1,8 +1,5 @@
 package ru.x5;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /*
 Написать программу, вычисляющую стоимость 10
 минутного междугороднего разговора в зависимости
@@ -14,32 +11,33 @@ import java.util.Map;
 41.5»
  */
 public class Task7 {
-    private Map<Integer,Float> callCost = new HashMap<>();
-    private Map<Integer,String> cityCode = new HashMap<>();
-    public Task7(){
-        cityCode.put(905,"Москва");
-        cityCode.put(194,"Ростов");
-        cityCode.put(491,"Краснодар");
-        cityCode.put(800,"Киров");
-        callCost.put(905,4.15f);
-        callCost.put(194,1.98f);
-        callCost.put(491,2.69f);
-        callCost.put(800,5.00f);
-    }
-    public void pritTenCost(int code){
-        System.out.println(cityCode.get(code) + ". Стоимость разговора: " + callCost.get(code) * 10);
-    }
 
-    public void solveTask(Reader reader){
-        while(true) {
-            try {
-                System.out.println("Введите код города:");
-                pritTenCost(reader.readInt());
+    public void printTenCost(int code) {
+        //System.out.println(cityCode.get(code) + ". Стоимость разговора: " + callCost.get(code) * 10);
+        switch (code) {
+            case 905: {
+                System.out.println("Москва. Стоимость разговора: " + 4.15f * 10);
                 break;
             }
-            catch (Exception e){
+            case 194: {
+                System.out.println("Ростов. Стоимость разговора: " + 1.98f * 10);
+                break;
+            }
+            case 491: {
+                System.out.println("Краснодар. Стоимость разговора: " + 2.69f * 10);
+                break;
+            }
+            case 800: {
+                System.out.println("Киров. Стоимость разговора: " + 5.00f * 10);
+                break;
+            }
+            default: {
                 System.out.println("Неизвестный код города");
             }
         }
+    }
+
+    public void solveTask(Reader reader) {
+        printTenCost(reader.readInt());
     }
 }

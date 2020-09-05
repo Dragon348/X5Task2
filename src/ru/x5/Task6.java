@@ -1,4 +1,5 @@
 package ru.x5;
+
 /*
 Ввести целое число в консоли. Вывести его строку-
 описание вида «отрицательное четное число»,
@@ -6,17 +7,28 @@ package ru.x5;
 т. д.
 */
 public class Task6 {
-    public void printDescription(int number){
-        if (number == 0) System.out.println("нулевое число");
+    public void printDescription(int number) {
+        if (number == 0) {
+            System.out.println("нулевое число");
+        }
         else {
-            if (number > 0) System.out.print("положительное ");
-            else System.out.print("отрицательное ");
-            if (number % 2 == 0) System.out.print("четное ");
-            else System.out.print("нечетное ");
+            if (number > 0) {
+                System.out.print("положительное ");
+            }
+            else {
+                System.out.print("отрицательное ");
+            }
+            if (number % 2 == 0) {
+                System.out.print("четное ");
+            }
+            else {
+                System.out.print("нечетное ");
+            }
             System.out.println("число");
         }
     }
-    public void solveTask(Reader reader){
+
+    public void solveTask(Reader reader) {
         System.out.print("Введите целое число: ");
         printDescription(reader.readInt());
     }
