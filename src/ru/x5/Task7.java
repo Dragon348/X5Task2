@@ -12,23 +12,22 @@ package ru.x5;
  */
 public class Task7 {
 
-    public void printTenCost(int code) {
-        //System.out.println(cityCode.get(code) + ". Стоимость разговора: " + callCost.get(code) * 10);
+    public void printTenCost(int code, int time) {
         switch (code) {
             case 905: {
-                System.out.println("Москва. Стоимость разговора: " + 4.15f * 10);
+                System.out.println("Москва. Стоимость разговора: " + 4.15f * time);
                 break;
             }
             case 194: {
-                System.out.println("Ростов. Стоимость разговора: " + 1.98f * 10);
+                System.out.println("Ростов. Стоимость разговора: " + 1.98f * time);
                 break;
             }
             case 491: {
-                System.out.println("Краснодар. Стоимость разговора: " + 2.69f * 10);
+                System.out.println("Краснодар. Стоимость разговора: " + 2.69f * time);
                 break;
             }
             case 800: {
-                System.out.println("Киров. Стоимость разговора: " + 5.00f * 10);
+                System.out.println("Киров. Стоимость разговора: " + 5.00f * time);
                 break;
             }
             default: {
@@ -38,6 +37,6 @@ public class Task7 {
     }
 
     public void solveTask(Reader reader) {
-        printTenCost(reader.readInt());
+        printTenCost(reader.readInt(), 10);
     }
 }
